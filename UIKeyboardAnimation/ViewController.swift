@@ -27,6 +27,7 @@ class ViewController: UIViewController {
 
     @IBAction func postButtonTapped(_ sender: UIButton) {
         self.textField.text = ""
+        view.endEditing(true)
     }
     
     @objc func keyboardWillHide(_ notification: Notification) {
