@@ -10,14 +10,33 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let nc = NotificationCenter.default
+        
+        nc.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
+        
+        nc.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardDidShow, object: nil)
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func postButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    @objc func keyboardWillHide() {
+        
+        
+    }
+    
+    @objc func keyboardWillShow() {
+        
+        
     }
 
 
